@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Questions</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>questions</key>
+	<array>
+		<dict>
+			<key>answers</key>
+			<array>
+				<string>answer0</string>
+				<string>answer1</string>
+				<string>answer2</string>
+				<string>answer3</string>
+			</array>
+			<key>question</key>
+			<string>question number 1</string>
+			<key>right</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>sequence</key>
+			<integer>1</integer>
+			<key>tags</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>answers</key>
+			<array>
+				<string>answer0</string>
+				<string>answer1</string>
+				<string>answer2</string>
+				<string>answer3</string>
+			</array>
+			<key>question</key>
+			<string>question number 2</string>
+			<key>right</key>
+			<array>
+				<integer>1</integer>
+			</array>
+			<key>sequence</key>
+			<integer>2</integer>
+			<key>tags</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>answers</key>
+			<array>
+				<string>answer0</string>
+				<string>answer1</string>
+				<string>answer2</string>
+				<string>answer3</string>
+			</array>
+			<key>question</key>
+			<string>question number 3</string>
+			<key>right</key>
+			<array>
+				<integer>2</integer>
+			</array>
+			<key>sequence</key>
+			<integer>3</integer>
+			<key>tags</key>
+			<array/>
+		</dict>
+	</array>
+</dict>
+</plist>
