@@ -13,10 +13,13 @@
 		B70C4A3F2727E621002ABE98 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70C4A3D2727E621002ABE98 /* Login.storyboard */; };
 		B70C4A412727E625002ABE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70C4A402727E625002ABE98 /* Assets.xcassets */; };
 		B70C4A442727E625002ABE98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70C4A422727E625002ABE98 /* LaunchScreen.storyboard */; };
-		B78768EF272FE73800E32CA9 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78768EE272FE73800E32CA9 /* Questions.storyboard */; };
 		B78768F1273001DA00E32CA9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78768F0273001DA00E32CA9 /* Question.swift */; };
 		B78768F7273009D400E32CA9 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78768F6273009D400E32CA9 /* QuestionViewController.swift */; };
 		B78768F82730121C00E32CA9 /* quiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = B70C4A452727E625002ABE98 /* quiz.plist */; };
+		B7D19CC7273120BD0066DC98 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D19CC6273120BD0066DC98 /* Data.swift */; };
+		B7E0BC432733FE440008FFD3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC422733FE440008FFD3 /* Util.swift */; };
+		B7E0BC4527340C840008FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0BC4427340C840008FFD3 /* Main.storyboard */; };
+		B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +31,13 @@
 		B70C4A402727E625002ABE98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B70C4A432727E625002ABE98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B70C4A452727E625002ABE98 /* quiz.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = quiz.plist; sourceTree = "<group>"; };
-		B78768EE272FE73800E32CA9 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
 		B78768F0273001DA00E32CA9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B78768F6273009D400E32CA9 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		B7D19CC6273120BD0066DC98 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B7D19CC8273125CC0066DC98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E0BC422733FE440008FFD3 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B7E0BC4427340C840008FFD3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,7 @@
 				B70C4A372727E621002ABE98 /* AppDelegate.swift */,
 				B70C4A392727E621002ABE98 /* SceneDelegate.swift */,
 				B70C4A402727E625002ABE98 /* Assets.xcassets */,
+				B7D19CC8273125CC0066DC98 /* Info.plist */,
 				B70C4A452727E625002ABE98 /* quiz.plist */,
 			);
 			path = "dd-quiz";
@@ -78,6 +86,8 @@
 		B7ECD760272E5D9A004E46E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B7D19CC6273120BD0066DC98 /* Data.swift */,
+				B7E0BC422733FE440008FFD3 /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -103,6 +113,7 @@
 			children = (
 				B70C4A3B2727E621002ABE98 /* ViewController.swift */,
 				B78768F6273009D400E32CA9 /* QuestionViewController.swift */,
+				B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,7 +123,7 @@
 			children = (
 				B70C4A422727E625002ABE98 /* LaunchScreen.storyboard */,
 				B70C4A3D2727E621002ABE98 /* Login.storyboard */,
-				B78768EE272FE73800E32CA9 /* Questions.storyboard */,
+				B7E0BC4427340C840008FFD3 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -176,8 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70C4A442727E625002ABE98 /* LaunchScreen.storyboard in Resources */,
+				B7E0BC4527340C840008FFD3 /* Main.storyboard in Resources */,
 				B70C4A412727E625002ABE98 /* Assets.xcassets in Resources */,
-				B78768EF272FE73800E32CA9 /* Questions.storyboard in Resources */,
 				B78768F82730121C00E32CA9 /* quiz.plist in Resources */,
 				B70C4A3F2727E621002ABE98 /* Login.storyboard in Resources */,
 			);
@@ -191,8 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70C4A3C2727E621002ABE98 /* ViewController.swift in Sources */,
+				B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */,
+				B7D19CC7273120BD0066DC98 /* Data.swift in Sources */,
 				B78768F7273009D400E32CA9 /* QuestionViewController.swift in Sources */,
 				B78768F1273001DA00E32CA9 /* Question.swift in Sources */,
+				B7E0BC432733FE440008FFD3 /* Util.swift in Sources */,
 				B70C4A382727E621002ABE98 /* AppDelegate.swift in Sources */,
 				B70C4A3A2727E621002ABE98 /* SceneDelegate.swift in Sources */,
 			);
@@ -345,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T9667Z235;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "dd-quiz/quiz.plist";
+				INFOPLIST_FILE = "dd-quiz/info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
@@ -373,7 +387,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T9667Z235;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "dd-quiz/quiz.plist";
+				INFOPLIST_FILE = "dd-quiz/info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;

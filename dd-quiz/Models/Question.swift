@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Root:Codable{
-    let questions: [Question]
-}
+//struct Root:Codable{
+//    let questions: [Question]
+//}
 
 struct Question:Codable{
     let sequence: Int

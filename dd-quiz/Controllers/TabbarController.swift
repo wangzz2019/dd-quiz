@@ -1,30 +1,20 @@
 //
-//  QuestionViewController.swift
+//  TabbarController.swift
 //  dd-quiz
 //
-//  Created by Jack Wang on 11/1/21.
+//  Created by Jack Wang on 11/4/21.
 //
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class TabbarController: UITabBarController {
 
-    var questions=Array<Question>()
-    
-    @IBOutlet weak var lblQuestion: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let questions=Data.getRandomQuiz()
-        print(questions.count)
-        
+
+        // Do any additional setup after loading the view.
     }
     
-    //MARK: -
-    //MARK: show questions
-    func showQuestion(question:Question){
-        
-    }
 
     /*
     // MARK: - Navigation
