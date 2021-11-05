@@ -9,6 +9,14 @@ import Foundation
 
 class Util
 {
+    class func checkAllSelected(a: Array<Int>) -> Bool
+    {
+        for i in a
+        {
+            if i==0 {return false}
+        }
+        return true;
+    }
     class func getRandomInList(start: Int, end: Int) -> [Int]
     {
         let scope=end-start

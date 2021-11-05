@@ -20,6 +20,8 @@
 		B7E0BC432733FE440008FFD3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC422733FE440008FFD3 /* Util.swift */; };
 		B7E0BC4527340C840008FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0BC4427340C840008FFD3 /* Main.storyboard */; };
 		B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */; };
+		B7E0BC492734CA920008FFD3 /* SubmitAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */; };
+		B7E0BC4B2734F45A0008FFD3 /* OptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B7E0BC422733FE440008FFD3 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B7E0BC4427340C840008FFD3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitAnswerButton.swift; sourceTree = "<group>"; };
+		B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				B7ECD764272E5DD2004E46E2 /* Storyboards */,
+				B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */,
+				B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 				B70C4A3C2727E621002ABE98 /* ViewController.swift in Sources */,
 				B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */,
 				B7D19CC7273120BD0066DC98 /* Data.swift in Sources */,
+				B7E0BC492734CA920008FFD3 /* SubmitAnswerButton.swift in Sources */,
 				B78768F7273009D400E32CA9 /* QuestionViewController.swift in Sources */,
 				B78768F1273001DA00E32CA9 /* Question.swift in Sources */,
 				B7E0BC432733FE440008FFD3 /* Util.swift in Sources */,
+				B7E0BC4B2734F45A0008FFD3 /* OptionLabel.swift in Sources */,
 				B70C4A382727E621002ABE98 /* AppDelegate.swift in Sources */,
 				B70C4A3A2727E621002ABE98 /* SceneDelegate.swift in Sources */,
 			);
