@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Datadog
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,6 +17,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        //init Datadog
+        Datadog.initialize(
+            appContext: .init(),
+            trackingConsent: .granted,
+            configuration: Datadog.Configuration
+            .builderUsing(
+                rumApplicationID: "xxx",
+                clientToken: "yyy",
+                environment:"dev"
+            )
+            .trackUIKitRUMActions()
+            .trackUIKitRUMViews(using: DefaultUIKitRUMViewsPredicate())
+            .trackURLSession(firstPartyHosts: ["datadoghq.com"])
+            .build()
+        )
+        Datadog.verbosityLevel = .debug
+
+        Global.rum = RUMMonitor.initialize()
+        
+        // Capture RUM resources with Datadog DDURLSessionDelegate:
+        let session = URLSession(
+            configuration: .default,
+            delegate: DDURLSessionDelegate(),
+            delegateQueue: nil
+        )
+               
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

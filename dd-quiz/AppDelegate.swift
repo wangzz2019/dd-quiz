@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Datadog
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        //init Datadog
+//        Datadog.initialize(
+//            appContext: .init(),
+//            trackingConsent: .granted,
+//            configuration: Datadog.Configuration
+//            .builderUsing(
+//                rumApplicationID: "135521e8-c318-4942-b55f-87e25e309ad4",
+//                clientToken: "pub2e368f8be370929c4e334df09304804d",
+//                environment:"dev"
+//            )
+//            .trackUIKitRUMActions()
+//            .trackUIKitRUMViews(using: DefaultUIKitRUMViewsPredicate())
+//            .trackURLSession(firstPartyHosts: ["datadoghq.com"])
+//            .build()
+//        )
+//        Datadog.verbosityLevel = .debug
+//
+//        Global.rum = RUMMonitor.initialize()
+
+        // Capture RUM resources with Datadog DDURLSessionDelegate:
+        let session = URLSession(
+            configuration: .default,
+            delegate: DDURLSessionDelegate(),
+            delegateQueue: nil
+        )
+                                    
+        
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
