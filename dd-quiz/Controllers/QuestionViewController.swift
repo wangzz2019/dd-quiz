@@ -11,7 +11,7 @@ import UIKit
 class QuestionViewController: UIViewController {
     var questions = Array<Question>()
     var currentQNum: Int = 1
-    var MaxQNum: Int = 3
+//    var MaxQNum: Int = 3
     var rightAnswers = [1, 2, 3]
     var Answers = [0, 0, 0]
     var lblQs = Array<OptionLabel>()
@@ -30,14 +30,14 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // use Alamofire for getting data
-        let parameters: [String: Int] = ["num": MaxQNum]
-        let urlString: String = "http://localhost:8080/quiz"
+        let parameters: [String: Int] = ["num": MAXQNUM]
+//        let urlString: String = "http://localhost:8080/quiz"
         let headers: HTTPHeaders = [
             "Accept": "application/json",
             "Content-type": "application/json",
         ]
         print(parameters)
-        AF.request(urlString,
+        AF.request(URLSTRING,
                    method: .post,
                    parameters: parameters,
                    encoding: JSONEncoding.default,
@@ -98,7 +98,7 @@ class QuestionViewController: UIViewController {
     }
 
     @objc func buttonTapped(_ button: UIButton) {
-        if currentQNum < MaxQNum {
+        if currentQNum < MAXQNUM {
             // next question
             currentQNum = currentQNum + 1
             showQuestion(question: questions[currentQNum - 1])
@@ -126,7 +126,7 @@ class QuestionViewController: UIViewController {
 
     func updateSubmitButtonStatus() {
         var canSubmit = false
-        if currentQNum == MaxQNum && Util.checkAllSelected(a: Answers) {
+        if currentQNum == MAXQNUM && Util.checkAllSelected(a: Answers) {
             canSubmit = true
         }
         btnNext.canSubmit = canSubmit
@@ -144,7 +144,7 @@ class QuestionViewController: UIViewController {
     // MARK: show questions
 
     func showQuestion(question: Question) {
-        lblQuestions.text = "Questions [\(currentQNum)/\(MaxQNum)]"
+        lblQuestions.text = "Questions [\(currentQNum)/\(MAXQNUM)]"
         lblQuestion.text = question.question
         lblQ1.text = "A: \(question.answers[0])"
         lblQ2.text = "B: \(question.answers[1])"

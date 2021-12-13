@@ -22,6 +22,8 @@
 		B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */; };
 		B7E0BC492734CA920008FFD3 /* SubmitAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */; };
 		B7E0BC4B2734F45A0008FFD3 /* OptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */; };
+		B7EEE72B2767861E00BD1C28 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEE72A2767861E00BD1C28 /* ProgressCircleView.swift */; };
+		B7EEE72D276787CF00BD1C28 /* GlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEE72C276787CF00BD1C28 /* GlobalConst.swift */; };
 		D8FC11A75CE52419476A906D /* libPods-dd-quiz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20690F5664E90832DB730444 /* libPods-dd-quiz.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitAnswerButton.swift; sourceTree = "<group>"; };
 		B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLabel.swift; sourceTree = "<group>"; };
+		B7EEE72A2767861E00BD1C28 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		B7EEE72C276787CF00BD1C28 /* GlobalConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConst.swift; sourceTree = "<group>"; };
 		B7F7B9232761086500F962E5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 			children = (
 				B7D19CC6273120BD0066DC98 /* Data.swift */,
 				B7E0BC422733FE440008FFD3 /* Util.swift */,
+				B7EEE72C276787CF00BD1C28 /* GlobalConst.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 				B7ECD764272E5DD2004E46E2 /* Storyboards */,
 				B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */,
 				B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */,
+				B7EEE72A2767861E00BD1C28 /* ProgressCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EEE72B2767861E00BD1C28 /* ProgressCircleView.swift in Sources */,
 				B70C4A3C2727E621002ABE98 /* ViewController.swift in Sources */,
 				B7E0BC4727341F4D0008FFD3 /* TabbarController.swift in Sources */,
 				B7D19CC7273120BD0066DC98 /* Data.swift in Sources */,
+				B7EEE72D276787CF00BD1C28 /* GlobalConst.swift in Sources */,
 				B7E0BC492734CA920008FFD3 /* SubmitAnswerButton.swift in Sources */,
 				B78768F7273009D400E32CA9 /* QuestionViewController.swift in Sources */,
 				B78768F1273001DA00E32CA9 /* Question.swift in Sources */,
