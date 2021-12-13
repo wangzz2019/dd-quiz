@@ -39,12 +39,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-jC-2kI" userLabel="QuestionArea">
+                            <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-jC-2kI" userLabel="QuestionArea">
                                 <rect key="frame" x="14" y="134" width="404" height="584"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4P-tG-kXj" userLabel="Question Title Lable">
-                                        <rect key="frame" x="0.0" y="8" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4P-tG-kXj" userLabel="Question Title Lable">
+                                        <rect key="frame" x="0.0" y="8" width="396" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ttc-HO-uul"/>
                                             <constraint firstAttribute="width" constant="328" id="j9i-Eg-0eW"/>

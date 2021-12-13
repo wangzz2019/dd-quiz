@@ -32,16 +32,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .trackURLSession(firstPartyHosts: ["datadoghq.com"])
             .build()
         )
-        Datadog.verbosityLevel = .debug
+//        Datadog.verbosityLevel = .debug
 
         Global.rum = RUMMonitor.initialize()
         
         // Capture RUM resources with Datadog DDURLSessionDelegate:
-        let session = URLSession(
-            configuration: .default,
-            delegate: DDURLSessionDelegate(),
-            delegateQueue: nil
-        )
+//        let session = URLSession(
+//            configuration: .default,
+//            delegate: DDURLSessionDelegate(),
+//            delegateQueue: nil
+//        )
                
         
         guard let _ = (scene as? UIWindowScene) else { return }

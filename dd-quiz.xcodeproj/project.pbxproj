@@ -46,6 +46,7 @@
 		B7E0BC4627341F4D0008FFD3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		B7E0BC482734CA920008FFD3 /* SubmitAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitAnswerButton.swift; sourceTree = "<group>"; };
 		B7E0BC4A2734F45A0008FFD3 /* OptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLabel.swift; sourceTree = "<group>"; };
+		B7F7B9232761086500F962E5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		B70C4A2B2727E621002ABE98 = {
 			isa = PBXGroup;
 			children = (
+				B7F7B9232761086500F962E5 /* MyPlayground.playground */,
 				B70C4A362727E621002ABE98 /* dd-quiz */,
 				B70C4A352727E621002ABE98 /* Products */,
 				DFE240AF1CAB9E57082B052A /* Pods */,

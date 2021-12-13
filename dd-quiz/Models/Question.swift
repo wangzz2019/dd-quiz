@@ -11,11 +11,13 @@ import Foundation
 //    let questions: [Question]
 //}
 
-struct Question:Codable{
+struct Question:Decodable{
+    let id:Int
     let sequence: Int
     let question: String
     let answers:Array<String>
     let right:Array<Int>
+    let category: String
     let tags:Array<String>
 }
 

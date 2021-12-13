@@ -41,11 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Global.rum = RUMMonitor.initialize()
 
         // Capture RUM resources with Datadog DDURLSessionDelegate:
-        let session = URLSession(
-            configuration: .default,
-            delegate: DDURLSessionDelegate(),
-            delegateQueue: nil
-        )
+//        let session = URLSession(
+//            configuration: .default,
+//            delegate: DDURLSessionDelegate(),
+//            delegateQueue: nil
+//        )
                                     
         
         // Called when a new scene session is being created.
