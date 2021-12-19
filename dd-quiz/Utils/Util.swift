@@ -9,6 +9,18 @@ import Foundation
 
 class Util
 {
+    class func getScore(a: Array<Int>,ra: Array<Int>) -> Int{
+        var correctCount:Double=0.0
+        for i in 0..<a.count{
+            if (a[i]==ra[i]) {
+                correctCount+=1
+            }
+        }
+        let fmaxq=Double(MAXQNUM)
+        let retVal=Int(correctCount / fmaxq * 100)
+        return retVal
+    }
+    
     class func checkAllSelected(a: Array<Int>) -> Bool
     {
         for i in a

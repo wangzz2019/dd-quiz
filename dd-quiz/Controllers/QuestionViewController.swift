@@ -12,7 +12,7 @@ class QuestionViewController: UIViewController {
     var questions = Array<Question>()
     var currentQNum: Int = 1
 //    var MaxQNum: Int = 3
-    var rightAnswers = [1, 2, 3]
+    var rightAnswers = Array<Int>(repeating: 0, count: MAXQNUM)
     var Answers = [0, 0, 0]
     var lblQs = Array<OptionLabel>()
 
@@ -24,8 +24,11 @@ class QuestionViewController: UIViewController {
     @IBOutlet var lblQ3: OptionLabel!
     @IBOutlet var lblQ4: OptionLabel!
 
+    @IBOutlet var questionArea: UIView!
     @IBOutlet var btnNext: SubmitAnswerButton!
     @IBOutlet var btnBack: SubmitAnswerButton!
+
+    @IBOutlet var pcv: ProgressCircleView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,43 +47,43 @@ class QuestionViewController: UIViewController {
                    headers: headers).responseJSON { response in
             switch response.result {
             case .success:
-                //Change values to Question
-                //set values to UI
+                // Change values to Question
+                // set values to UI
                 let qs = response.value as! Array<Dictionary<String, Any>>
 //                print("value**: \(response.value)")
-                var qNum:Int = 1
+                var qNum: Int = 1
                 for dict in qs {
                     print(dict)
-                    var dictQuestion=dict
-                    dictQuestion["sequence"]=qNum
-                    
-                    let strAnswers:String=dict["answers"] as! String
-                    let answersArray=strAnswers.components(separatedBy: ",")
-                    dictQuestion["answers"]=answersArray
-                    
-                    let intRight:Int=(dict["right"] as! NSString).integerValue
-                    let rightArray:[Int]=[intRight]
-                    dictQuestion["right"]=rightArray
-                    
-                    if let strTags:String=dict["tags"] as? String {
-                        let tagsArray=strTags.components(separatedBy: ",")
-                        dictQuestion["tags"]=tagsArray
+                    var dictQuestion = dict
+                    dictQuestion["sequence"] = qNum
+
+                    let strAnswers: String = dict["answers"] as! String
+                    let answersArray = strAnswers.components(separatedBy: ",")
+                    dictQuestion["answers"] = answersArray
+
+                    let intRight: Int = (dict["right"] as! NSString).integerValue
+                    let rightArray: [Int] = [intRight]
+                    dictQuestion["right"] = rightArray
+
+                    if let strTags: String = dict["tags"] as? String {
+                        let tagsArray = strTags.components(separatedBy: ",")
+                        dictQuestion["tags"] = tagsArray
+                    } else {
+                        dictQuestion["tags"] = [""]
                     }
-                    else{
-                        dictQuestion["tags"]=[""]
-                    }
-                    let jsonData=Data.toJSONString(dict:dictQuestion).data(using: String.Encoding.utf8.rawValue)
-                    let decoder=JSONDecoder()
-                    let q=try! decoder.decode(Question.self,from:jsonData!)
-                    qNum=qNum+1
+                    let jsonData = Data.toJSONString(dict: dictQuestion).data(using: String.Encoding.utf8.rawValue)
+                    let decoder = JSONDecoder()
+                    let q = try! decoder.decode(Question.self, from: jsonData!)
+                    qNum = qNum + 1
                     self.questions.append(q)
                 }
                 self.showQuestion(question: self.questions[0])
+                // fill rightAnswers
+                self.fillRightAnswers(questions: self.questions)
             case let .failure(error):
                 print(error)
             }
         }
-        
 
         lblQs = [lblQ1, lblQ2, lblQ3, lblQ4]
 //        let optionTap1=UITapGestureRecognizer(target: self, action: #selector(optionTap(_:)))
@@ -102,6 +105,18 @@ class QuestionViewController: UIViewController {
             // next question
             currentQNum = currentQNum + 1
             showQuestion(question: questions[currentQNum - 1])
+        } else {
+            questionArea.isHidden = true
+            pcv.updateSubView()
+            pcv.isHidden = false
+            pcv.alpha = 0
+            let score = Util.getScore(a: Answers, ra: rightAnswers)
+            pcv.setScore(score: score)
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: { () -> Void in
+                self.pcv.alpha = 1.0
+            }, completion: { (_) -> Void in
+//                self.pcv.setProgress(value: CGFloat(100), animationDuration: 1.0)
+            })
         }
         updateSubmitButtonStatus()
     }
@@ -142,6 +157,12 @@ class QuestionViewController: UIViewController {
     // MARK: -
 
     // MARK: show questions
+
+    func fillRightAnswers(questions: Array<Question>) {
+        for i in 0 ..< questions.count {
+            rightAnswers[i] = questions[i].right[0]
+        }
+    }
 
     func showQuestion(question: Question) {
         lblQuestions.text = "Questions [\(currentQNum)/\(MAXQNUM)]"
